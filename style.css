@@ -323,4 +323,16 @@ footer {
   .hero h1 {
     font-size: 32px;
   }
+}.language-btn {
+  background-color: #d6b48c;
+  color: #111827;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.language-btn:hover {
+  background-color: white;
 }
