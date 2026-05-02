@@ -18,14 +18,16 @@
 
       <ul>
         <li><a href="#about" data-i18n="navAbout">About</a></li>
-        <li><a href="#profile" data-i18n="navProfile">Profile</a></li>
         <li><a href="#experience" data-i18n="navExperience">Experience</a></li>
-        <li><a href="#education" data-i18n="navEducation">Education</a></li>
-        <li><a href="#skills" data-i18n="navSkills">Skills</a></li>
         <li><a href="#contact" data-i18n="navContact">Contact</a></li>
         <li><a href="career.html">Career Goals</a></li>
         <li><a href="mun.html">MUN Apartment</a></li>
-        <li><button id="language-btn" class="language-btn">EN</button></li>
+        <li><a href="djkrios.html">DJ Krios</a></li>
+        <li class="lang-switch">
+          <button class="flag active" data-lang="en">🇬🇧</button>
+          <button class="flag" data-lang="it">🇮🇹</button>
+          <button class="flag" data-lang="es">🇪🇸</button>
+        </li>
       </ul>
     </nav>
 
@@ -450,24 +452,38 @@
       }
     };
 
-    const languages = ["en", "it", "es"];
-    let currentLanguageIndex = 0;
-
-    const languageButton = document.getElementById("language-btn");
     const elementsToTranslate = document.querySelectorAll("[data-i18n]");
+const flags = document.querySelectorAll(".flag");
 
-    languageButton.addEventListener("click", () => {
-      currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
-      const selectedLanguage = languages[currentLanguageIndex];
+function applyLanguage(language) {
+  elementsToTranslate.forEach((element) => {
+    const key = element.getAttribute("data-i18n");
 
-      elementsToTranslate.forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-        element.textContent = translations[selectedLanguage][key];
-      });
+    if (translations[language] && translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
 
-      languageButton.textContent = selectedLanguage.toUpperCase();
-      document.documentElement.lang = selectedLanguage;
-    });
+  flags.forEach((flag) => {
+    flag.classList.remove("active");
+
+    if (flag.dataset.lang === language) {
+      flag.classList.add("active");
+    }
+  });
+
+  document.documentElement.lang = language;
+  localStorage.setItem("selectedLanguage", language);
+}
+
+const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+applyLanguage(savedLanguage);
+
+flags.forEach((flag) => {
+  flag.addEventListener("click", () => {
+    applyLanguage(flag.dataset.lang);
+  });
+});
   </script>
 
 </body>

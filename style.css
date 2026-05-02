@@ -335,4 +335,28 @@ footer {
 
 .language-btn:hover {
   background-color: white;
+}.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag {
+  background: transparent;
+  border: 2px solid transparent;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 8px;
+  opacity: 0.6;
+}
+
+.flag:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.flag.active {
+  opacity: 1;
+  border-color: #d6b48c;
 }
