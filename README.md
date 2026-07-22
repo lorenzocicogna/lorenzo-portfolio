@@ -16,6 +16,8 @@ lorenzo-portfolio/
 │   │   ├── profile/lorenzo-cicogna-profile.png
 │   │   ├── badges/hubspot-digital-marketing.png
 │   │   ├── branding/
+│   │   │   ├── lorenzo-cicogna-logo.png
+│   │   │   └── lorenzo-cicogna-monogram.png
 │   │   └── projects/
 │   └── documents/
 └── README.md
@@ -23,3 +25,8 @@ lorenzo-portfolio/
 
 Upload the whole structure to the root of the GitHub repository.
 GitHub Pages source: main branch, root folder.
+
+
+## Branding
+
+The monogram is used in the navbar and as the favicon. The complete logo is used in the footer.
