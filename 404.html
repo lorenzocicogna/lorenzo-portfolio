@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests;"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Page Not Found | Lorenzo Cicogna</title>
+  <meta name="description" content="The requested page could not be found." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body data-page="404">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Lorenzo Cicogna home">
+        <span class="brand-mark">LC</span>
+        <span class="brand-text">Lorenzo Cicogna</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="main-menu">
+        <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
+        <li><a href="index.html#experience" data-i18n="navExperience">Experience</a></li>
+        <li><a href="index.html#certifications" data-i18n="navCertifications">Certifications</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+        <li class="lang-switch" aria-label="Language">
+          <button class="flag active" type="button" data-lang="en" aria-label="English">🇬🇧</button>
+          <button class="flag" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+          <button class="flag" type="button" data-lang="es" aria-label="Español">🇪🇸</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow center reveal">
+        <p class="eyebrow">404</p>
+        <h1 data-i18n="notFoundTitle">Page not found</h1>
+        <p data-i18n="notFoundText">The page may have been moved or the address may be incorrect.</p>
+        <div class="hero-actions centered">
+          <a class="button button-primary" href="index.html" data-i18n="backHome">Back home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Lorenzo Cicogna</strong>
+        <p data-i18n="footerRole">Economics & Business Student</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:lorenzocicogna00@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p>© <span data-current-year></span> Lorenzo Cicogna</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+
+</body>
+</html>

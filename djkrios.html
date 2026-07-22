@@ -2,142 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests;"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <title>DJ Krios | Events & Music</title>
-  <meta name="description" content="DJ Krios - DJ for private events, parties, birthdays and weddings. Tech House, Reggaeton, Trap and Commercial music."/>
-
-  <link rel="stylesheet" href="style.css"/>
+  <meta
+    name="description"
+    content="DJ Krios for private parties, birthdays, graduation parties and weddings. Tech House, Reggaeton, Trap, Commercial and Bounce."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body data-page="dj">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Lorenzo Cicogna home">
+        <span class="brand-mark">LC</span>
+        <span class="brand-text">Lorenzo Cicogna</span>
+      </a>
 
-  <!-- NAV -->
-  <nav class="navbar" style="padding:20px 8%; background:#111827;">
-    <div class="logo" style="color:white;">DJ Krios</div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
 
-    <ul>
-      <li><a href="index.html" style="color:white;">← Portfolio</a></li>
-      <li><a href="career.html" style="color:white;">Career</a></li>
-      <li><a href="mun.html" style="color:white;">MUN Apartment</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero" style="min-height:70vh; text-align:center;">
-    <div class="hero-content">
-
-      <p class="tagline">🎧 DJ • Event Creator • Party Starter</p>
-
-      <h1>Krios Beats: Feel the Vibe</h1>
-
-      <p>
-        DJ Krios brings energy, rhythm and atmosphere to every event.
-        From private parties to birthdays and celebrations, the goal is simple:
-        make people dance and create unforgettable moments.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="https://instagram.com/djkrios_" target="_blank" class="btn">
-          Instagram
-        </a>
-        <a href="mailto:lorenzocicogna00@gmail.com?subject=DJ%20Booking%20-%20DJ%20Krios" class="btn secondary">
-          Book Me
-        </a>
-      </div>
-
-    </div>
+      <ul class="nav-menu" id="main-menu">
+        <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
+        <li><a href="index.html#experience" data-i18n="navExperience">Experience</a></li>
+        <li><a href="index.html#certifications" data-i18n="navCertifications">Certifications</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+        <li class="lang-switch" aria-label="Language">
+          <button class="flag active" type="button" data-lang="en" aria-label="English">🇬🇧</button>
+          <button class="flag" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+          <button class="flag" type="button" data-lang="es" aria-label="Español">🇪🇸</button>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>About DJ Krios</h2>
-
-    <p>
-      DJ Krios is a young and passionate DJ focused on delivering high-energy performances
-      across multiple music styles, including Tech House, Reggaeton, Trap and Commercial music.
-    </p>
-
-    <p>
-      With the ability to adapt to different audiences and events, DJ Krios creates engaging
-      atmospheres that keep people dancing and enjoying every moment.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section light">
-    <h2>Events & Services</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Private Parties</h3>
-        <p>Music and atmosphere tailored to your event.</p>
+  <main>
+    <section class="page-hero dj-hero">
+      <div class="container narrow reveal center">
+        <p class="eyebrow" data-i18n="djEyebrow">DJ · Event creator · Party starter</p>
+        <h1>Krios Beats: Feel the Vibe</h1>
+        <p data-i18n="djLead">
+          Music, energy and atmosphere for private events, birthdays,
+          graduation parties and weddings.
+        </p>
+        <div class="hero-actions centered">
+          <a
+            class="button button-primary"
+            href="https://instagram.com/djkrios_"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            class="button button-secondary"
+            href="mailto:lorenzocicogna00@gmail.com?subject=DJ%20Krios%20Booking%20Request"
+            data-i18n="bookMe"
+          >
+            Book DJ Krios
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Birthdays</h3>
-        <p>High-energy sets to make your night unforgettable.</p>
+    <section class="section">
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="djAboutEyebrow">About</p>
+          <h2 data-i18n="djAboutTitle">A flexible set for every event</h2>
+        </div>
+        <div class="section-copy reveal">
+          <p class="lead" data-i18n="djAboutLead">
+            DJ Krios adapts the music selection to the audience, the occasion and the desired atmosphere.
+          </p>
+          <p data-i18n="djAboutText">
+            The service includes playlist preparation, event coordination and an energetic performance
+            designed to create memorable moments.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Graduation Parties</h3>
-        <p>Celebrate your achievement with the right vibe.</p>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="eventsEyebrow">Events</p>
+          <h2 data-i18n="eventsTitle">Events and services</h2>
+        </div>
+        <div class="cards role-grid">
+          <article class="card reveal"><h3 data-i18n="privateParties">Private Parties</h3><p data-i18n="privatePartiesText">Music and atmosphere tailored to your event.</p></article>
+          <article class="card reveal"><h3 data-i18n="birthdays">Birthdays</h3><p data-i18n="birthdaysText">High-energy sets for an unforgettable celebration.</p></article>
+          <article class="card reveal"><h3 data-i18n="graduations">Graduation Parties</h3><p data-i18n="graduationsText">Celebrate your achievement with the right soundtrack.</p></article>
+          <article class="card reveal"><h3 data-i18n="weddings">Weddings</h3><p data-i18n="weddingsText">From elegant moments to a complete party experience.</p></article>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Weddings</h3>
-        <p>From elegant moments to full party experience.</p>
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="musicEyebrow">Music</p>
+          <h2 data-i18n="musicTitle">Music styles</h2>
+        </div>
+        <div class="skills reveal">
+          <span>Tech House</span><span>Reggaeton</span><span>Trap</span>
+          <span>Commercial</span><span>Bounce</span><span>Party Music</span>
+        </div>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="https://www.youtube.com/@djkriosss" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="button button-secondary" href="https://djkrios00.wixsite.com/djkrios" target="_blank" rel="noopener noreferrer">Website</a>
+        </div>
       </div>
-
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Lorenzo Cicogna</strong>
+        <p data-i18n="footerRole">Economics & Business Student</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:lorenzocicogna00@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p>© <span data-current-year></span> Lorenzo Cicogna</p>
     </div>
-  </section>
-
-  <!-- MUSIC STYLE -->
-  <section class="section">
-    <h2>Music Style</h2>
-
-    <div class="skills">
-      <span>Tech House</span>
-      <span>Reggaeton</span>
-      <span>Trap</span>
-      <span>Commercial</span>
-      <span>Bounce</span>
-      <span>Party Music</span>
-    </div>
-  </section>
-
-  <!-- SOCIAL -->
-  <section class="section light">
-    <h2>Follow & Listen</h2>
-
-    <p>Check out my content and latest tracks:</p>
-
-    <div class="hero-buttons">
-      <a href="https://instagram.com/djkrios_" target="_blank" class="btn">Instagram</a>
-      <a href="https://www.youtube.com/@djkriosss" target="_blank" class="btn secondary">YouTube</a>
-      <a href="https://djkrios00.wixsite.com/djkrios" target="_blank" class="btn outline">Website</a>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section contact">
-    <h2>Book DJ Krios</h2>
-
-    <p>
-      Looking for a DJ for your event?  
-      Contact me and let’s create an unforgettable experience.
-    </p>
-
-    <a href="mailto:lorenzocicogna00@gmail.com?subject=DJ%20Booking%20-%20DJ%20Krios" class="btn">
-      Book Now
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 DJ Krios</p>
   </footer>
+
+  <script src="assets/js/script.js" defer></script>
 
 </body>
 </html>

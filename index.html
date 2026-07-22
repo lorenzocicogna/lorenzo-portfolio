@@ -3,488 +3,346 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests;"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Lorenzo Cicogna | Personal Website</title>
-  <meta name="description" content="Personal website of Lorenzo Cicogna, Economics and Business student focused on customer experience, operations, tourism, sales and business performance." />
-
-  <link rel="stylesheet" href="style.css" />
+  <title>Lorenzo Cicogna | Business, Operations & Customer Experience</title>
+  <meta
+    name="description"
+    content="Portfolio of Lorenzo Cicogna, Economics and Business student with experience in operations, customer experience, tourism, sales and business performance."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Lorenzo Cicogna home">
+        <span class="brand-mark">LC</span>
+        <span class="brand-text">Lorenzo Cicogna</span>
+      </a>
 
-  <header class="hero">
-    <nav class="navbar">
-      <div class="logo">Lorenzo Cicogna</div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
 
-      <ul>
-        <li><a href="#about" data-i18n="navAbout">About</a></li>
-        <li><a href="#experience" data-i18n="navExperience">Experience</a></li>
-        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
-        <li><a href="career.html">Career Goals</a></li>
-        <li><a href="mun.html">MUN Apartment</a></li>
-        <li><a href="djkrios.html">DJ Krios</a></li>
-        <li class="lang-switch">
-          <button class="flag active" data-lang="en">🇬🇧</button>
-          <button class="flag" data-lang="it">🇮🇹</button>
-          <button class="flag" data-lang="es">🇪🇸</button>
+      <ul class="nav-menu" id="main-menu">
+        <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
+        <li><a href="index.html#experience" data-i18n="navExperience">Experience</a></li>
+        <li><a href="index.html#certifications" data-i18n="navCertifications">Certifications</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+        <li class="lang-switch" aria-label="Language">
+          <button class="flag active" type="button" data-lang="en" aria-label="English">🇬🇧</button>
+          <button class="flag" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+          <button class="flag" type="button" data-lang="es" aria-label="Español">🇪🇸</button>
         </li>
       </ul>
     </nav>
-
-    <div class="hero-content">
-      <p class="tagline" data-i18n="tagline">Economics & Business Student</p>
-
-      <h1 data-i18n="heroTitle">Building experience across business, operations and customer management.</h1>
-
-      <p data-i18n="heroText">
-        I am Lorenzo Cicogna, focused on customer experience, operations and business performance,
-        with hands-on experience in tourism, sales and real-world business environments.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="mailto:lorenzocicogna00@gmail.com" class="btn">Email</a>
-        <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank" class="btn secondary">LinkedIn</a>
-      </div>
-    </div>
   </header>
 
-  <section class="highlights">
-    <div class="highlight-container">
-      <div class="highlight-box">
-        <h3 data-i18n="highlight1Title">Customer Experience</h3>
-        <p data-i18n="highlight1Text">Strong focus on service quality and client satisfaction.</p>
-      </div>
-
-      <div class="highlight-box">
-        <h3 data-i18n="highlight2Title">Tourism & Mobility</h3>
-        <p data-i18n="highlight2Text">Hands-on experience in tourism operations and transport.</p>
-      </div>
-
-      <div class="highlight-box">
-        <h3 data-i18n="highlight3Title">Operations & Sales</h3>
-        <p data-i18n="highlight3Text">Managing bookings, pricing and daily business operations.</p>
-      </div>
-
-      <div class="highlight-box">
-        <h3 data-i18n="highlight4Title">International Mindset</h3>
-        <p data-i18n="highlight4Text">Daily communication in English and Spanish.</p>
-      </div>
-    </div>
-  </section>
-
   <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="homeEyebrow">Economics & Business Student</p>
+          <h1 data-i18n="homeTitle">Business thinking shaped by hands-on operational experience.</h1>
+          <p class="hero-lead" data-i18n="homeLead">
+            I combine academic training in Economics and Business Administration with practical experience
+            in customer management, tourism, sales and daily operations.
+          </p>
 
-    <section id="about" class="section">
-      <h2 data-i18n="aboutTitle">About Me</h2>
-      <p data-i18n="aboutText">
-        I am an Economics and Business Administration student with experience in hospitality,
-        tourism mobility, customer service, technical production, mechanical design and operational environments.
-        My background combines practical problem solving, customer relations and business management.
-      </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience" data-i18n="viewExperience">View experience</a>
+            <a
+              class="button button-secondary"
+              href="mailto:lorenzocicogna00@gmail.com?subject=Portfolio%20Contact%20-%20Lorenzo%20Cicogna"
+              data-i18n="contactMe"
+            >
+              Contact me
+            </a>
+          </div>
+        </div>
+
+        <figure class="profile-card reveal">
+          <div class="profile-ring">
+            <img
+              src="assets/images/profile/lorenzo-cicogna-profile.png"
+              alt="Professional portrait of Lorenzo Cicogna"
+            />
+          </div>
+          <figcaption>
+            <strong>Lorenzo Cicogna</strong>
+            <span data-i18n="profileCaption">Operations · Analysis · Customer Experience</span>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section id="profile" class="section profile-section">
-      <h2 data-i18n="profileTitle">Professional Profile</h2>
-      <p data-i18n="profileText1">
-        I am interested in business analysis, KPI reporting, operations management and the use of digital
-        tools to improve business processes. Through my experience in short-term rental operations and
-        tourism mobility, I developed skills in customer management, sales, bookings, on-site operations
-        and online visibility.
-      </p>
-
-      <p data-i18n="profileText2">
-        My technical background in CNC programming and CAD design helped me develop precision,
-        organization and analytical thinking. I am now focused on connecting these skills with business,
-        management and data-driven decision making.
-      </p>
+    <section class="metrics-strip" aria-label="Professional focus">
+      <div class="container metric-grid">
+        <article>
+          <span>01</span>
+          <h2 data-i18n="focus1Title">Business Analysis</h2>
+          <p data-i18n="focus1Text">KPIs, reporting and performance interpretation.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2 data-i18n="focus2Title">Operations</h2>
+          <p data-i18n="focus2Text">Processes, coordination and daily execution.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2 data-i18n="focus3Title">Customer Experience</h2>
+          <p data-i18n="focus3Text">Service quality and customer satisfaction.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h2 data-i18n="focus4Title">International Mindset</h2>
+          <p data-i18n="focus4Text">English, Spanish and multicultural experience.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="experience" class="section dark">
-      <h2 data-i18n="experienceTitle">Professional Experience</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3 data-i18n="exp1Title">Driver & Customer Experience Associate</h3>
-          <h4>Tuk Tuk Bergamo | July 2025 - Present</h4>
-          <p data-i18n="exp1Text">Working in tourist transportation and customer service, supporting local and international clients during city tours.</p>
-          <ul>
-            <li data-i18n="exp1li1">Daily use of English and Spanish</li>
-            <li data-i18n="exp1li2">Customer experience and on-site operations</li>
-            <li data-i18n="exp1li3">Route optimization based on traffic and demand</li>
-            <li data-i18n="exp1li4">Support in bookings and sales</li>
-            <li data-i18n="exp1li5">Feedback collection to improve service</li>
-          </ul>
+    <section class="section" id="about">
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
+          <h2 data-i18n="aboutTitle">A practical profile with analytical direction.</h2>
         </div>
-
-        <div class="card">
-          <h3 data-i18n="exp2Title">Host & Sales Manager</h3>
-          <h4>MUN Apartment | March 2023 - Present</h4>
-          <p data-i18n="exp2Text">Managing a short-term rental business, covering both operational and commercial activities.</p>
-          <ul>
-            <li data-i18n="exp2li1">Booking platforms management, including Airbnb and Booking</li>
-            <li data-i18n="exp2li2">Customer communication and guest support end-to-end</li>
-            <li data-i18n="exp2li3">Pricing strategy and performance tracking</li>
-            <li data-i18n="exp2li4">Social media and online visibility management</li>
-            <li data-i18n="exp2li5">Supplier and service provider coordination</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="exp3Title">CNC Programmer</h3>
-          <h4>STEMA TECH SRL | September 2022 - May 2023</h4>
-          <ul>
-            <li data-i18n="exp3li1">CNC programming and machine operation</li>
-            <li data-i18n="exp3li2">CAM software usage for toolpath generation</li>
-            <li data-i18n="exp3li3">Manufacturing precision mechanical parts</li>
-            <li data-i18n="exp3li4">Supporting production workflow efficiency</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="exp4Title">Italian Navy Volunteer</h3>
-          <h4>Italian Navy | August 2021 - August 2022</h4>
-          <ul>
-            <li data-i18n="exp4li1">Ship mooring and unmooring operations</li>
-            <li data-i18n="exp4li2">Security duties on board and in naval facilities</li>
-            <li data-i18n="exp4li3">Supporting onboard operations and logistics</li>
-            <li data-i18n="exp4li4">Participation in international training exercises</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="exp5Title">Special Forces Trainee</h3>
-          <h4>Italian Navy | January 2022 - March 2022</h4>
-          <ul>
-            <li data-i18n="exp5li1">Preliminary training program for Italian Navy special forces</li>
-            <li data-i18n="exp5li2">Training in telecommunications, land combat and weapons handling</li>
-            <li data-i18n="exp5li3">Basic topography, navigation and intensive physical training</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="exp6Title">CAD Designer</h3>
-          <h4>PM Impianti Technomac S.r.l. | September 2020 - March 2021</h4>
-          <ul>
-            <li data-i18n="exp6li1">2D/3D mechanical design</li>
-            <li data-i18n="exp6li2">Technical drawings for industrial components</li>
-            <li data-i18n="exp6li3">Supplier coordination and technical documentation</li>
-          </ul>
+        <div class="section-copy reveal">
+          <p class="lead" data-i18n="aboutLead">
+            I am an Economics and Business Administration student interested in business analysis,
+            operations management and data-informed decision-making.
+          </p>
+          <p data-i18n="aboutText">
+            My experience spans hospitality, tourism mobility, customer service, technical production
+            and mechanical design. This combination strengthened my problem-solving, precision,
+            adaptability and ability to manage customers and operational priorities.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="education" class="section">
-      <h2 data-i18n="educationTitle">Education</h2>
+    <section class="section section-dark" id="experience">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="experienceEyebrow">Experience</p>
+          <h2 data-i18n="experienceTitle">Professional experience</h2>
+        </div>
 
-      <div class="card white">
-        <h3>University of Milano-Bicocca</h3>
-        <h4 data-i18n="edu1Degree">Bachelor’s Degree in Economics and Business Administration</h4>
-        <p>October 2023 - October 2026</p>
-        <p data-i18n="edu1Skills">Skills: Teamwork, Microsoft Excel, business administration, economics and analytical thinking.</p>
-      </div>
+        <div class="cards experience-grid">
+          <article class="card reveal">
+            <p class="card-meta">Tuk Tuk Bergamo · 2025–Present</p>
+            <h3 data-i18n="exp1Title">Driver & Customer Experience Associate</h3>
+            <p data-i18n="exp1Text">
+              Tourist transportation, customer support, route optimization, bookings, sales and service feedback.
+            </p>
+          </article>
 
-      <div class="card white">
-        <h3>EKA University of Applied Sciences</h3>
-        <h4 data-i18n="edu2Degree">Erasmus Program in Economics</h4>
-        <p>January 2025 - June 2025</p>
-        <p data-i18n="edu2Text1">
-          During my Erasmus at EKA University in Riga, I strengthened my academic background
-          in Economics and Business through courses such as Business Economics and Planning,
-          Statistics, International Trade Law, Branding and Macroeconomics.
-        </p>
-        <p data-i18n="edu2Text2">
-          This experience enhanced my analytical thinking, adaptability and international mindset
-          in a multicultural environment.
-        </p>
-      </div>
+          <article class="card reveal">
+            <p class="card-meta">MUN Apartment · 2023–Present</p>
+            <h3 data-i18n="exp2Title">Host & Sales Manager</h3>
+            <p data-i18n="exp2Text">
+              Short-term rental operations, booking platforms, guest support, pricing and supplier coordination.
+            </p>
+          </article>
 
-      <div class="card white">
-        <h3>ITIS Pietro Paleocapa</h3>
-        <h4 data-i18n="edu3Degree">Technical and Professional Diploma in Industrial Mechatronics</h4>
-        <p>September 2014 - July 2020</p>
-        <p data-i18n="edu3Grade">Final grade: 84/100</p>
+          <article class="card reveal">
+            <p class="card-meta">STEMA TECH SRL · 2022–2023</p>
+            <h3 data-i18n="exp3Title">CNC Programmer</h3>
+            <p data-i18n="exp3Text">
+              CNC programming, CAM workflows and precision mechanical production.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-meta">Italian Navy · 2021–2022</p>
+            <h3 data-i18n="exp4Title">Italian Navy Volunteer</h3>
+            <p data-i18n="exp4Text">
+              Security, logistics, onboard operations and international training exercises.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-meta">Italian Navy · 2022</p>
+            <h3 data-i18n="exp5Title">Special Forces Trainee</h3>
+            <p data-i18n="exp5Text">
+              Preliminary training in navigation, telecommunications, field activities and physical preparation.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-meta">PM Impianti Technomac · 2020–2021</p>
+            <h3 data-i18n="exp6Title">CAD Designer</h3>
+            <p data-i18n="exp6Text">
+              2D/3D mechanical design, technical drawings and supplier documentation.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section light">
-      <h2 data-i18n="skillsTitle">Skills</h2>
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="educationEyebrow">Education</p>
+          <h2 data-i18n="educationTitle">Education and international experience</h2>
+        </div>
 
-      <div class="skills">
-        <span>KPI Reporting</span>
-        <span>Data Analysis</span>
-        <span>Microsoft Excel</span>
-        <span>Customer Experience</span>
-        <span>Customer Management</span>
-        <span>Sales Channels</span>
-        <span>Booking Management</span>
-        <span>Operations</span>
-        <span>Problem Solving</span>
-        <span>Teamwork</span>
-        <span>English</span>
-        <span>Spanish</span>
-        <span>CAD Design</span>
-        <span>CNC Programming</span>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span>2023–2026</span>
+            <div>
+              <h3>University of Milano-Bicocca</h3>
+              <p data-i18n="edu1">Bachelor’s Degree in Economics and Business Administration.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>2025</span>
+            <div>
+              <h3>EKA University of Applied Sciences</h3>
+              <p data-i18n="edu2">Erasmus Program in Economics and Business in Riga.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>2014–2020</span>
+            <div>
+              <h3>ITIS Pietro Paleocapa</h3>
+              <p data-i18n="edu3">Technical Diploma in Industrial Mechatronics · 84/100.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <h2 data-i18n="contactTitle">Contact</h2>
+    <section class="section section-soft" id="certifications">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="certEyebrow">Certifications</p>
+          <h2 data-i18n="certTitle">Continuous learning</h2>
+        </div>
 
-      <p>Email: <a href="mailto:lorenzocicogna00@gmail.com">lorenzocicogna00@gmail.com</a></p>
-      <p>Phone: <a href="tel:+393516896022">+39 351 689 6022</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank">Lorenzo Cicogna</a></p>
-      <p data-i18n="location">Location: Bergamo, Italy</p>
+        <a
+          class="certification-card reveal"
+          href="https://app-eu1.hubspot.com/academy/achievements/s914s69l/en/1/lorenzo-cicogna/digital-marketing-certified"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open HubSpot Digital Marketing certification"
+        >
+          <img
+            src="assets/images/badges/hubspot-digital-marketing.png"
+            alt="HubSpot Academy Digital Marketing Certified badge"
+          />
+          <div>
+            <p class="card-meta">HubSpot Academy</p>
+            <h3 data-i18n="hubspotTitle">Digital Marketing Certified</h3>
+            <p data-i18n="hubspotText">
+              Certification covering digital marketing strategy, content, SEO, social media,
+              email marketing and performance measurement.
+            </p>
+            <span class="text-link" data-i18n="viewCredential">View credential →</span>
+          </div>
+        </a>
+      </div>
     </section>
 
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="skillsEyebrow">Skills</p>
+          <h2 data-i18n="skillsTitle">Core competencies</h2>
+        </div>
+        <div class="skills reveal">
+          <span>KPI Reporting</span>
+          <span>Data Analysis</span>
+          <span>Microsoft Excel</span>
+          <span>Customer Experience</span>
+          <span>Operations</span>
+          <span>Sales Channels</span>
+          <span>Booking Management</span>
+          <span>Problem Solving</span>
+          <span>Teamwork</span>
+          <span>English</span>
+          <span>Spanish</span>
+          <span>CAD Design</span>
+          <span>CNC Programming</span>
+          <span>Digital Marketing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-projects" id="projects">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="projectsEyebrow">Projects</p>
+          <h2 data-i18n="projectsTitle">Explore my work and goals</h2>
+        </div>
+
+        <div class="cards project-grid">
+          <a class="card project-card reveal" href="career.html">
+            <span>01</span>
+            <h3 data-i18n="careerCardTitle">Career Goals</h3>
+            <p data-i18n="careerCardText">Target roles, professional direction and opportunities in Spain.</p>
+          </a>
+          <a class="card project-card reveal" href="mun.html">
+            <span>02</span>
+            <h3>MUN Apartment</h3>
+            <p data-i18n="munCardText">A real short-term rental project focused on operations and customer experience.</p>
+          </a>
+          <a class="card project-card reveal" href="djkrios.html">
+            <span>03</span>
+            <h3>DJ Krios</h3>
+            <p data-i18n="djCardText">Event services, music and personal creative project.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 data-i18n="contactTitle">Let’s connect.</h2>
+          <p data-i18n="contactText">
+            Open to internship and entry-level opportunities in business analysis,
+            operations, aviation, mobility and business development.
+          </p>
+        </div>
+        <div class="contact-card reveal">
+          <a href="mailto:lorenzocicogna00@gmail.com">lorenzocicogna00@gmail.com</a>
+          <a href="tel:+393516896022">+39 351 689 6022</a>
+          <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <p data-i18n="location">Bergamo, Italy</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2026 Lorenzo Cicogna. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Lorenzo Cicogna</strong>
+        <p data-i18n="footerRole">Economics & Business Student</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:lorenzocicogna00@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p>© <span data-current-year></span> Lorenzo Cicogna</p>
+    </div>
   </footer>
 
-  <script>
-    const translations = {
-      en: {
-        navAbout: "About",
-        navProfile: "Profile",
-        navExperience: "Experience",
-        navEducation: "Education",
-        navSkills: "Skills",
-        navContact: "Contact",
-        tagline: "Economics & Business Student",
-        heroTitle: "Building experience across business, operations and customer management.",
-        heroText: "I am Lorenzo Cicogna, focused on customer experience, operations and business performance, with hands-on experience in tourism, sales and real-world business environments.",
-        highlight1Title: "Customer Experience",
-        highlight1Text: "Strong focus on service quality and client satisfaction.",
-        highlight2Title: "Tourism & Mobility",
-        highlight2Text: "Hands-on experience in tourism operations and transport.",
-        highlight3Title: "Operations & Sales",
-        highlight3Text: "Managing bookings, pricing and daily business operations.",
-        highlight4Title: "International Mindset",
-        highlight4Text: "Daily communication in English and Spanish.",
-        aboutTitle: "About Me",
-        aboutText: "I am an Economics and Business Administration student with experience in hospitality, tourism mobility, customer service, technical production, mechanical design and operational environments. My background combines practical problem solving, customer relations and business management.",
-        profileTitle: "Professional Profile",
-        profileText1: "I am interested in business analysis, KPI reporting, operations management and the use of digital tools to improve business processes. Through my experience in short-term rental operations and tourism mobility, I developed skills in customer management, sales, bookings, on-site operations and online visibility.",
-        profileText2: "My technical background in CNC programming and CAD design helped me develop precision, organization and analytical thinking. I am now focused on connecting these skills with business, management and data-driven decision making.",
-        experienceTitle: "Professional Experience",
-        exp1Title: "Driver & Customer Experience Associate",
-        exp1Text: "Working in tourist transportation and customer service, supporting local and international clients during city tours.",
-        exp1li1: "Daily use of English and Spanish",
-        exp1li2: "Customer experience and on-site operations",
-        exp1li3: "Route optimization based on traffic and demand",
-        exp1li4: "Support in bookings and sales",
-        exp1li5: "Feedback collection to improve service",
-        exp2Title: "Host & Sales Manager",
-        exp2Text: "Managing a short-term rental business, covering both operational and commercial activities.",
-        exp2li1: "Booking platforms management, including Airbnb and Booking",
-        exp2li2: "Customer communication and guest support end-to-end",
-        exp2li3: "Pricing strategy and performance tracking",
-        exp2li4: "Social media and online visibility management",
-        exp2li5: "Supplier and service provider coordination",
-        exp3Title: "CNC Programmer",
-        exp3li1: "CNC programming and machine operation",
-        exp3li2: "CAM software usage for toolpath generation",
-        exp3li3: "Manufacturing precision mechanical parts",
-        exp3li4: "Supporting production workflow efficiency",
-        exp4Title: "Italian Navy Volunteer",
-        exp4li1: "Ship mooring and unmooring operations",
-        exp4li2: "Security duties on board and in naval facilities",
-        exp4li3: "Supporting onboard operations and logistics",
-        exp4li4: "Participation in international training exercises",
-        exp5Title: "Special Forces Trainee",
-        exp5li1: "Preliminary training program for Italian Navy special forces",
-        exp5li2: "Training in telecommunications, land combat and weapons handling",
-        exp5li3: "Basic topography, navigation and intensive physical training",
-        exp6Title: "CAD Designer",
-        exp6li1: "2D/3D mechanical design",
-        exp6li2: "Technical drawings for industrial components",
-        exp6li3: "Supplier coordination and technical documentation",
-        educationTitle: "Education",
-        edu1Degree: "Bachelor’s Degree in Economics and Business Administration",
-        edu1Skills: "Skills: Teamwork, Microsoft Excel, business administration, economics and analytical thinking.",
-        edu2Degree: "Erasmus Program in Economics",
-        edu2Text1: "During my Erasmus at EKA University in Riga, I strengthened my academic background in Economics and Business through courses such as Business Economics and Planning, Statistics, International Trade Law, Branding and Macroeconomics.",
-        edu2Text2: "This experience enhanced my analytical thinking, adaptability and international mindset in a multicultural environment.",
-        edu3Degree: "Technical and Professional Diploma in Industrial Mechatronics",
-        edu3Grade: "Final grade: 84/100",
-        skillsTitle: "Skills",
-        contactTitle: "Contact",
-        location: "Location: Bergamo, Italy"
-      },
-
-      it: {
-        navAbout: "Chi sono",
-        navProfile: "Profilo",
-        navExperience: "Esperienze",
-        navEducation: "Formazione",
-        navSkills: "Competenze",
-        navContact: "Contatti",
-        tagline: "Studente di Economia e Business",
-        heroTitle: "Esperienza tra business, operations e gestione del cliente.",
-        heroText: "Sono Lorenzo Cicogna, focalizzato su customer experience, operations e performance aziendale, con esperienza pratica nel turismo, nelle vendite e in contesti business reali.",
-        highlight1Title: "Customer Experience",
-        highlight1Text: "Forte attenzione alla qualità del servizio e alla soddisfazione del cliente.",
-        highlight2Title: "Turismo & Mobilità",
-        highlight2Text: "Esperienza operativa nel turismo e nei servizi di trasporto.",
-        highlight3Title: "Operations & Vendite",
-        highlight3Text: "Gestione di prenotazioni, pricing e attività operative quotidiane.",
-        highlight4Title: "Mentalità Internazionale",
-        highlight4Text: "Comunicazione quotidiana in inglese e spagnolo.",
-        aboutTitle: "Chi sono",
-        aboutText: "Sono uno studente di Economia e Amministrazione d’Impresa con esperienza in hospitality, mobilità turistica, customer service, produzione tecnica, disegno meccanico e contesti operativi. Il mio background combina problem solving pratico, relazione con il cliente e gestione aziendale.",
-        profileTitle: "Profilo Professionale",
-        profileText1: "Sono interessato all’analisi aziendale, ai KPI, alla gestione delle operations e all’utilizzo di strumenti digitali per migliorare i processi aziendali. Attraverso le mie esperienze negli affitti brevi e nella mobilità turistica, ho sviluppato competenze in gestione clienti, vendite, prenotazioni, attività operative e visibilità online.",
-        profileText2: "Il mio background tecnico in programmazione CNC e disegno CAD mi ha aiutato a sviluppare precisione, organizzazione e pensiero analitico. Ora sono focalizzato nel collegare queste competenze con business, management e decisioni basate sui dati.",
-        experienceTitle: "Esperienze Professionali",
-        exp1Title: "Driver & Customer Experience Associate",
-        exp1Text: "Lavoro nel trasporto turistico e nel servizio clienti, supportando clienti locali e internazionali durante tour cittadini.",
-        exp1li1: "Uso quotidiano di inglese e spagnolo",
-        exp1li2: "Customer experience e operations sul campo",
-        exp1li3: "Ottimizzazione dei percorsi in base a traffico e domanda",
-        exp1li4: "Supporto a prenotazioni e vendite",
-        exp1li5: "Raccolta feedback per migliorare il servizio",
-        exp2Title: "Host & Sales Manager",
-        exp2Text: "Gestione di un’attività di affitti brevi, seguendo sia gli aspetti operativi sia quelli commerciali.",
-        exp2li1: "Gestione piattaforme di prenotazione, incluse Airbnb e Booking",
-        exp2li2: "Comunicazione con il cliente e supporto ospiti end-to-end",
-        exp2li3: "Strategia di pricing e monitoraggio performance",
-        exp2li4: "Gestione social media e visibilità online",
-        exp2li5: "Coordinamento fornitori e service provider",
-        exp3Title: "Programmatore CNC",
-        exp3li1: "Programmazione CNC e utilizzo macchinari",
-        exp3li2: "Utilizzo software CAM per generazione percorsi utensile",
-        exp3li3: "Produzione di componenti meccanici di precisione",
-        exp3li4: "Supporto all’efficienza del flusso produttivo",
-        exp4Title: "Volontario Marina Militare",
-        exp4li1: "Operazioni di ormeggio e disormeggio navi",
-        exp4li2: "Servizi di sicurezza a bordo e in strutture navali",
-        exp4li3: "Supporto alle operazioni di bordo e alla logistica",
-        exp4li4: "Partecipazione ad esercitazioni internazionali",
-        exp5Title: "Allievo Incursore",
-        exp5li1: "Corso propedeutico per le forze speciali della Marina Militare",
-        exp5li2: "Formazione in telecomunicazioni, combattimento terrestre e impiego armi",
-        exp5li3: "Topografia, navigazione e allenamento fisico intensivo",
-        exp6Title: "Disegnatore CAD",
-        exp6li1: "Disegno meccanico 2D/3D",
-        exp6li2: "Disegni tecnici per componenti industriali",
-        exp6li3: "Coordinamento fornitori e documentazione tecnica",
-        educationTitle: "Formazione",
-        edu1Degree: "Laurea in Economia e Amministrazione d’Impresa",
-        edu1Skills: "Competenze: lavoro di squadra, Microsoft Excel, amministrazione aziendale, economia e pensiero analitico.",
-        edu2Degree: "Programma Erasmus in Economics",
-        edu2Text1: "Durante il mio Erasmus presso EKA University a Riga, ho rafforzato la mia preparazione in Economia e Business attraverso corsi come Business Economics and Planning, Statistics, International Trade Law, Branding e Macroeconomics.",
-        edu2Text2: "Questa esperienza ha migliorato il mio pensiero analitico, la mia adattabilità e la mia mentalità internazionale in un ambiente multiculturale.",
-        edu3Degree: "Diploma Tecnico Professionale in Meccatronica Industriale",
-        edu3Grade: "Votazione finale: 84/100",
-        skillsTitle: "Competenze",
-        contactTitle: "Contatti",
-        location: "Località: Bergamo, Italia"
-      },
-
-      es: {
-        navAbout: "Sobre mí",
-        navProfile: "Perfil",
-        navExperience: "Experiencia",
-        navEducation: "Formación",
-        navSkills: "Competencias",
-        navContact: "Contacto",
-        tagline: "Estudiante de Economía y Empresa",
-        heroTitle: "Experiencia en business, operaciones y gestión del cliente.",
-        heroText: "Soy Lorenzo Cicogna, orientado a customer experience, operaciones y rendimiento empresarial, con experiencia práctica en turismo, ventas y entornos reales de negocio.",
-        highlight1Title: "Customer Experience",
-        highlight1Text: "Fuerte enfoque en la calidad del servicio y la satisfacción del cliente.",
-        highlight2Title: "Turismo & Movilidad",
-        highlight2Text: "Experiencia práctica en operaciones turísticas y transporte.",
-        highlight3Title: "Operaciones & Ventas",
-        highlight3Text: "Gestión de reservas, precios y operaciones diarias.",
-        highlight4Title: "Mentalidad Internacional",
-        highlight4Text: "Comunicación diaria en inglés y español.",
-        aboutTitle: "Sobre mí",
-        aboutText: "Soy estudiante de Economía y Administración de Empresas, con experiencia en hospitality, movilidad turística, atención al cliente, producción técnica, diseño mecánico y entornos operativos. Mi perfil combina resolución práctica de problemas, relación con clientes y gestión empresarial.",
-        profileTitle: "Perfil Profesional",
-        profileText1: "Me interesan el análisis empresarial, los KPI, la gestión de operaciones y el uso de herramientas digitales para mejorar procesos. A través de mi experiencia en alquileres de corta estancia y movilidad turística, desarrollé competencias en gestión de clientes, ventas, reservas, operaciones y visibilidad online.",
-        profileText2: "Mi background técnico en programación CNC y diseño CAD me ayudó a desarrollar precisión, organización y pensamiento analítico. Actualmente estoy enfocado en conectar estas habilidades con business, management y toma de decisiones basada en datos.",
-        experienceTitle: "Experiencia Profesional",
-        exp1Title: "Driver & Customer Experience Associate",
-        exp1Text: "Trabajo en transporte turístico y atención al cliente, apoyando a clientes locales e internacionales durante tours por la ciudad.",
-        exp1li1: "Uso diario de inglés y español",
-        exp1li2: "Customer experience y operaciones en campo",
-        exp1li3: "Optimización de rutas según tráfico y demanda",
-        exp1li4: "Apoyo en reservas y ventas",
-        exp1li5: "Recogida de feedback para mejorar el servicio",
-        exp2Title: "Host & Sales Manager",
-        exp2Text: "Gestión de un negocio de alquiler turístico, cubriendo tanto aspectos operativos como comerciales.",
-        exp2li1: "Gestión de plataformas de reserva, incluidas Airbnb y Booking",
-        exp2li2: "Comunicación con clientes y soporte completo al huésped",
-        exp2li3: "Estrategia de precios y seguimiento del rendimiento",
-        exp2li4: "Gestión de redes sociales y visibilidad online",
-        exp2li5: "Coordinación con proveedores y service providers",
-        exp3Title: "Programador CNC",
-        exp3li1: "Programación CNC y operación de maquinaria",
-        exp3li2: "Uso de software CAM para generación de trayectorias",
-        exp3li3: "Fabricación de piezas mecánicas de precisión",
-        exp3li4: "Apoyo a la eficiencia del flujo productivo",
-        exp4Title: "Voluntario Marina Italiana",
-        exp4li1: "Operaciones de amarre y desamarre de buques",
-        exp4li2: "Tareas de seguridad a bordo y en instalaciones navales",
-        exp4li3: "Apoyo a operaciones de bordo y logística",
-        exp4li4: "Participación en ejercicios internacionales",
-        exp5Title: "Aprendiz Fuerzas Especiales",
-        exp5li1: "Programa preliminar para fuerzas especiales de la Marina Italiana",
-        exp5li2: "Formación en telecomunicaciones, combate terrestre y manejo de armas",
-        exp5li3: "Topografía, navegación y entrenamiento físico intensivo",
-        exp6Title: "Diseñador CAD",
-        exp6li1: "Diseño mecánico 2D/3D",
-        exp6li2: "Dibujos técnicos para componentes industriales",
-        exp6li3: "Coordinación con proveedores y documentación técnica",
-        educationTitle: "Formación",
-        edu1Degree: "Grado en Economía y Administración de Empresas",
-        edu1Skills: "Competencias: trabajo en equipo, Microsoft Excel, administración empresarial, economía y pensamiento analítico.",
-        edu2Degree: "Programa Erasmus en Economía",
-        edu2Text1: "Durante mi Erasmus en EKA University en Riga, reforcé mi formación en Economía y Business mediante cursos como Business Economics and Planning, Statistics, International Trade Law, Branding y Macroeconomics.",
-        edu2Text2: "Esta experiencia mejoró mi pensamiento analítico, adaptabilidad y mentalidad internacional en un entorno multicultural.",
-        edu3Degree: "Diploma Técnico Profesional en Mecatrónica Industrial",
-        edu3Grade: "Nota final: 84/100",
-        skillsTitle: "Competencias",
-        contactTitle: "Contacto",
-        location: "Ubicación: Bérgamo, Italia"
-      }
-    };
-
-    const elementsToTranslate = document.querySelectorAll("[data-i18n]");
-const flags = document.querySelectorAll(".flag");
-
-function applyLanguage(language) {
-  elementsToTranslate.forEach((element) => {
-    const key = element.getAttribute("data-i18n");
-
-    if (translations[language] && translations[language][key]) {
-      element.textContent = translations[language][key];
-    }
-  });
-
-  flags.forEach((flag) => {
-    flag.classList.remove("active");
-
-    if (flag.dataset.lang === language) {
-      flag.classList.add("active");
-    }
-  });
-
-  document.documentElement.lang = language;
-  localStorage.setItem("selectedLanguage", language);
-}
-
-const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
-applyLanguage(savedLanguage);
-
-flags.forEach((flag) => {
-  flag.addEventListener("click", () => {
-    applyLanguage(flag.dataset.lang);
-  });
-});
-  </script>
+  <script src="assets/js/script.js" defer></script>
 
 </body>
 </html>

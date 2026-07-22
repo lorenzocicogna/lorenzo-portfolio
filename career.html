@@ -3,160 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests;"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <title>Career Goals | Lorenzo Cicogna</title>
-  <meta name="description" content="Career goals and target roles of Lorenzo Cicogna: Business Analyst, Operations Analyst, Airport Operations Analyst and Business Development roles in Spain." />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta
+    name="description"
+    content="Career goals and target roles of Lorenzo Cicogna in business analysis, operations, aviation, business development and strategy."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body data-page="career">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Lorenzo Cicogna home">
+        <span class="brand-mark">LC</span>
+        <span class="brand-text">Lorenzo Cicogna</span>
+      </a>
 
-  <nav class="navbar" style="padding:20px 8%; background:#111827;">
-    <div class="logo" style="color:white;">Career Goals</div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
 
-    <ul>
-      <li><a href="index.html" style="color:white;">← Back to Portfolio</a></li>
-      <li><a href="mun.html" style="color:white;">MUN Apartment</a></li>
-    </ul>
-  </nav>
-
-  <header class="hero" style="min-height:60vh;">
-    <div class="hero-content">
-      <p class="tagline">Career Direction</p>
-
-      <h1>Looking for internship and entry-level opportunities in Spain.</h1>
-
-      <p>
-        I am currently looking for opportunities where I can combine my academic background
-        in Economics and Business Administration with my practical experience in customer experience,
-        operations, sales and business management.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="mailto:lorenzocicogna00@gmail.com?subject=Career%20Opportunity%20-%20Lorenzo%20Cicogna" class="btn">
-          Contact me by email
-        </a>
-        <a href="index.html" class="btn secondary">
-          View Portfolio
-        </a>
-      </div>
-    </div>
+      <ul class="nav-menu" id="main-menu">
+        <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
+        <li><a href="index.html#experience" data-i18n="navExperience">Experience</a></li>
+        <li><a href="index.html#certifications" data-i18n="navCertifications">Certifications</a></li>
+        <li><a href="index.html#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+        <li class="lang-switch" aria-label="Language">
+          <button class="flag active" type="button" data-lang="en" aria-label="English">🇬🇧</button>
+          <button class="flag" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+          <button class="flag" type="button" data-lang="es" aria-label="Español">🇪🇸</button>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-
-    <section class="section">
-      <h2>What I am looking for</h2>
-      <p>
-        I am interested in internship and entry-level positions in Spain, especially in roles connected
-        to business analysis, operations, airport operations, business development, sales operations,
-        project management and strategy/planning.
-      </p>
-      <p>
-        My ideal environment is international, dynamic and performance-oriented, where I can work with
-        data, processes, customers and business operations.
-      </p>
-    </section>
-
-    <section class="section light">
-      <h2>Target Roles</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Business Analyst</h3>
-          <p>
-            Roles focused on business performance, process analysis, reporting, research and strategic support.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Operations Analyst</h3>
-          <p>
-            Positions related to operational efficiency, workflow improvement, KPI monitoring and process optimization.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Airport Operations Analyst</h3>
-          <p>
-            Roles connected to airport processes, airline operations, mobility, passenger experience and operational planning.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Business Development Intern</h3>
-          <p>
-            Opportunities involving market research, sales support, client management and growth initiatives.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Sales Operations Intern</h3>
-          <p>
-            Roles combining sales processes, customer management, reporting, CRM and commercial performance.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Strategy / Planning Analyst</h3>
-          <p>
-            Positions involving planning, analysis, business research and support to strategic decision-making.
-          </p>
+    <section class="page-hero">
+      <div class="container narrow reveal">
+        <p class="eyebrow" data-i18n="careerEyebrow">Career direction</p>
+        <h1 data-i18n="careerTitle">Looking for internship and entry-level opportunities in Spain.</h1>
+        <p data-i18n="careerLead">
+          I want to combine my academic background with practical experience in operations,
+          customer experience, sales and business management.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="button button-primary"
+            href="mailto:lorenzocicogna00@gmail.com?subject=Career%20Opportunity%20-%20Lorenzo%20Cicogna"
+            data-i18n="careerContact"
+          >
+            Contact me
+          </a>
+          <a class="button button-secondary" href="index.html" data-i18n="backPortfolio">Back to portfolio</a>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Areas of Interest</h2>
-
-      <div class="skills">
-        <span>Business Analysis</span>
-        <span>Operations Management</span>
-        <span>Airport Operations</span>
-        <span>Aviation</span>
-        <span>Mobility</span>
-        <span>Tourism</span>
-        <span>Business Development</span>
-        <span>Sales Operations</span>
-        <span>Project Management</span>
-        <span>Strategy & Planning</span>
-        <span>KPI Reporting</span>
-        <span>Process Improvement</span>
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="careerFocusEyebrow">Focus</p>
+          <h2 data-i18n="careerFocusTitle">What I am looking for</h2>
+        </div>
+        <div class="section-copy reveal">
+          <p class="lead" data-i18n="careerFocusLead">
+            International, dynamic and performance-oriented environments where I can work with data,
+            processes, customers and business operations.
+          </p>
+          <p data-i18n="careerFocusText">
+            My main areas of interest include business analysis, operations, airport operations,
+            business development, sales operations, project management and strategy.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="section light">
-      <h2>What I can bring</h2>
-
-      <p>
-        I bring a practical and business-oriented mindset, developed through direct experience in hospitality,
-        tourism mobility, customer management and technical production environments.
-      </p>
-
-      <p>
-        My background allows me to approach problems from both an operational and analytical perspective,
-        with attention to customer experience, performance indicators and process improvement.
-      </p>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <p class="eyebrow" data-i18n="rolesEyebrow">Target roles</p>
+          <h2 data-i18n="rolesTitle">Roles aligned with my profile</h2>
+        </div>
+        <div class="cards role-grid">
+          <article class="card reveal"><h3>Business Analyst</h3><p data-i18n="role1">Performance, reporting, research and strategic support.</p></article>
+          <article class="card reveal"><h3>Operations Analyst</h3><p data-i18n="role2">Process improvement, KPI monitoring and workflow optimization.</p></article>
+          <article class="card reveal"><h3>Airport Operations Analyst</h3><p data-i18n="role3">Airport processes, mobility, passenger experience and planning.</p></article>
+          <article class="card reveal"><h3>Business Development Intern</h3><p data-i18n="role4">Market research, client support and growth initiatives.</p></article>
+          <article class="card reveal"><h3>Sales Operations Intern</h3><p data-i18n="role5">Sales processes, CRM, reporting and commercial performance.</p></article>
+          <article class="card reveal"><h3>Strategy / Planning Analyst</h3><p data-i18n="role6">Planning, business research and decision support.</p></article>
+        </div>
+      </div>
     </section>
 
-    <section class="section contact">
-      <h2>Open to opportunities</h2>
-
-      <p>
-        If my profile matches an internship or entry-level opportunity, feel free to contact me directly.
-      </p>
-
-      <a href="mailto:lorenzocicogna00@gmail.com?subject=Career%20Opportunity%20-%20Lorenzo%20Cicogna" class="btn">
-        Send me an email
-      </a>
+    <section class="section contact-section">
+      <div class="container narrow reveal center">
+        <p class="eyebrow" data-i18n="openEyebrow">Open to opportunities</p>
+        <h2 data-i18n="openTitle">Does my profile match your team?</h2>
+        <a
+          class="button button-primary"
+          href="mailto:lorenzocicogna00@gmail.com?subject=Career%20Opportunity%20-%20Lorenzo%20Cicogna"
+          data-i18n="sendEmail"
+        >
+          Send me an email
+        </a>
+      </div>
     </section>
-
   </main>
-
-  <footer>
-    <p>© 2026 Lorenzo Cicogna</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Lorenzo Cicogna</strong>
+        <p data-i18n="footerRole">Economics & Business Student</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:lorenzocicogna00@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/lorenzo-cicogna-a7a300262" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p>© <span data-current-year></span> Lorenzo Cicogna</p>
+    </div>
   </footer>
+
+  <script src="assets/js/script.js" defer></script>
 
 </body>
 </html>
