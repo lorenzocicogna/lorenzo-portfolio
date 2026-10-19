@@ -179,19 +179,32 @@ p {
 }
 
 .flag {
-  border: 1px solid transparent;
-  border-radius: 8px;
-  background: transparent;
-  padding: 4px;
-  font-size: 18px;
-  opacity: 0.55;
+  width: 36px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 1;
   cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
-.flag:hover,
+.flag:hover {
+  transform: translateY(-1px);
+  border-color: rgba(221, 203, 181, 0.65);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .flag.active {
   border-color: var(--sand-500);
-  opacity: 1;
+  background: rgba(185, 140, 95, 0.16);
 }
 
 /* HERO */
