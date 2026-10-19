@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lorenzocicogna.github.io/lorenzo-portfolio/sitemap.xml
