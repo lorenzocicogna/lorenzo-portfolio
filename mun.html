@@ -33,6 +33,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/guida-portfolio.css?v=1" />
+  <link rel="stylesheet" href="assets/css/navigation-ux.css?v=1" />
 </head>
 
 <body data-page="mun">
@@ -60,11 +61,12 @@
       </button>
 
       <ul class="nav-menu" id="main-menu">
-        <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
-        <li><a href="index.html#experience" data-i18n="navExperience">Experience</a></li>
-        <li><a href="index.html#certifications" data-i18n="navCertifications">Certifications</a></li>
-        <li><a href="index.html#projects" data-i18n="navProjects">Projects</a></li>
-        <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+        <li><a href="index.html#about" data-ux-section="about" data-i18n="navAbout">About</a></li>
+        <li><a href="index.html#experience" data-ux-section="experience" data-i18n="navExperience">Experience</a></li>
+        <li><a href="index.html#skills" data-ux-section="skills" data-ux-key="uxNavSkills">Skills</a></li>
+        <li><a href="index.html#projects" data-ux-section="projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="career.html" data-ux-section="career" data-ux-key="uxNavCareer">Career</a></li>
+        <li><a href="index.html#contact" class="ux-nav-contact" data-ux-section="contact" data-i18n="navContact">Contact</a></li>
         <li class="lang-switch" aria-label="Language">
           <button class="flag active" type="button" data-lang="en" aria-label="English">🇬🇧</button>
           <button class="flag" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
@@ -72,11 +74,13 @@
         </li>
       </ul>
     </nav>
+    <div class="ux-progress" aria-hidden="true"><span class="ux-progress-fill"></span></div>
   </header>
 
   <main>
     <section class="page-hero project-hero">
       <div class="container narrow reveal">
+        <nav class="ux-breadcrumb" aria-label="Breadcrumb"><a href="index.html" data-ux-key="uxPortfolio">Portfolio</a><span aria-hidden="true">/</span><span aria-current="page" data-ux-key="uxMunCrumb">MUN Apartment</span></nav>
         <p class="eyebrow" data-i18n="munEyebrow">Short-term rental project</p>
         <h1 data-i18n="munTitle">Managing a complete hospitality business in Bergamo.</h1>
         <p data-i18n="munLead">
@@ -146,6 +150,27 @@
         </div>
       </div>
     </section>
+  
+    <section class="ux-more-projects" aria-labelledby="ux-more-title">
+      <div class="container">
+        <p class="ux-kicker" data-ux-key="uxMoreEyebrow">Explore further</p>
+        <h2 id="ux-more-title" data-ux-key="uxMoreTitle">See another side of my work.</h2>
+        <p class="ux-more-intro" data-ux-key="uxMoreIntro">My experiences connect business, hospitality and creative projects.</p>
+        <div class="ux-related-grid">
+          <a class="ux-related-card" href="career.html">
+            <span class="ux-card-arrow" aria-hidden="true">↗</span>
+            <strong data-ux-key="uxCareer">Career direction</strong>
+            <p data-ux-key="uxCareerMini">Target roles and professional ambitions.</p>
+          </a>
+          <a class="ux-related-card" href="djkrios.html">
+            <span class="ux-card-arrow" aria-hidden="true">↗</span>
+            <strong>DJ Krios</strong>
+            <p data-ux-key="uxDjMini">Music, live events and creative production.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -167,6 +192,7 @@
 
   <script src="assets/js/script.js" defer></script>
   <script src="assets/js/guida-portfolio.js?v=1" defer></script>
+  <script src="assets/js/navigation-ux.js?v=1" defer></script>
 
 </body>
 </html>

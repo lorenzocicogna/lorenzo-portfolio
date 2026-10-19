@@ -40,6 +40,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/guida-portfolio.css?v=1" />
+  <link rel="stylesheet" href="assets/css/navigation-ux.css?v=1" />
 </head>
 
 <body data-page="home">
@@ -67,11 +68,12 @@
       </button>
 
       <ul class="nav-menu" id="main-menu">
-        <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
-        <li><a href="index.html#experience" data-i18n="navExperience">Experience</a></li>
-        <li><a href="index.html#certifications" data-i18n="navCertifications">Certifications</a></li>
-        <li><a href="index.html#projects" data-i18n="navProjects">Projects</a></li>
-        <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+        <li><a href="index.html#about" data-ux-section="about" data-i18n="navAbout">About</a></li>
+        <li><a href="index.html#experience" data-ux-section="experience" data-i18n="navExperience">Experience</a></li>
+        <li><a href="index.html#skills" data-ux-section="skills" data-ux-key="uxNavSkills">Skills</a></li>
+        <li><a href="index.html#projects" data-ux-section="projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="career.html" data-ux-section="career" data-ux-key="uxNavCareer">Career</a></li>
+        <li><a href="index.html#contact" class="ux-nav-contact" data-ux-section="contact" data-i18n="navContact">Contact</a></li>
         <li class="lang-switch" aria-label="Language">
           <button class="flag active" type="button" data-lang="en" aria-label="English">🇬🇧</button>
           <button class="flag" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
@@ -79,6 +81,7 @@
         </li>
       </ul>
     </nav>
+    <div class="ux-progress" aria-hidden="true"><span class="ux-progress-fill"></span></div>
   </header>
 
   <main>
@@ -116,6 +119,24 @@
             <span data-i18n="profileCaption">Operations · Analysis · Customer Experience</span>
           </figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="ux-quick-paths" aria-labelledby="ux-quick-title">
+      <div class="container">
+        <div class="ux-quick-heading">
+          <div>
+            <p class="ux-kicker" data-ux-key="uxQuickEyebrow">Find your way</p>
+            <h2 id="ux-quick-title" data-ux-key="uxQuickTitle">Explore what matters to you.</h2>
+          </div>
+          <p data-ux-key="uxQuickIntro">A quick route through my experience, capabilities and projects.</p>
+        </div>
+        <div class="ux-quick-grid">
+          <a class="ux-quick-card" href="#experience"><span class="ux-card-index">01</span><span class="ux-card-arrow" aria-hidden="true">↗</span><strong data-ux-key="uxExperience">Experience</strong><p data-ux-key="uxExperienceText">Roles, responsibilities and hands-on operational work.</p></a>
+          <a class="ux-quick-card" href="#skills"><span class="ux-card-index">02</span><span class="ux-card-arrow" aria-hidden="true">↗</span><strong data-ux-key="uxSkills">Skills</strong><p data-ux-key="uxSkillsText">Data, operations, digital tools and business knowledge.</p></a>
+          <a class="ux-quick-card" href="#projects"><span class="ux-card-index">03</span><span class="ux-card-arrow" aria-hidden="true">↗</span><strong data-ux-key="uxProjects">Projects</strong><p data-ux-key="uxProjectsText">Explore real projects and the work behind them.</p></a>
+          <a class="ux-quick-card" href="career.html"><span class="ux-card-index">04</span><span class="ux-card-arrow" aria-hidden="true">↗</span><strong data-ux-key="uxCareer">Career direction</strong><p data-ux-key="uxCareerText">Roles I am looking for and the next step I want to take.</p></a>
+        </div>
       </div>
     </section>
 
@@ -324,17 +345,17 @@
             <span>01</span>
             <h3 data-i18n="careerCardTitle">Career Goals</h3>
             <p data-i18n="careerCardText">Target roles, professional direction and opportunities in Spain.</p>
-          </a>
+          <span class="ux-project-action"><span data-ux-key="uxExplore">Discover more</span><span aria-hidden="true">↗</span></span></a>
           <a class="card project-card reveal" href="mun.html">
             <span>02</span>
             <h3>MUN Apartment</h3>
             <p data-i18n="munCardText">A real short-term rental project focused on operations and customer experience.</p>
-          </a>
+          <span class="ux-project-action"><span data-ux-key="uxExplore">Discover more</span><span aria-hidden="true">↗</span></span></a>
           <a class="card project-card reveal" href="djkrios.html">
             <span>03</span>
             <h3>DJ Krios</h3>
             <p data-i18n="djCardText">Event services, music and personal creative project.</p>
-          </a>
+          <span class="ux-project-action"><span data-ux-key="uxExplore">Discover more</span><span aria-hidden="true">↗</span></span></a>
         </div>
       </div>
     </section>
@@ -379,6 +400,7 @@
 
   <script src="assets/js/script.js" defer></script>
   <script src="assets/js/guida-portfolio.js?v=1" defer></script>
+  <script src="assets/js/navigation-ux.js?v=1" defer></script>
 
 </body>
 </html>
