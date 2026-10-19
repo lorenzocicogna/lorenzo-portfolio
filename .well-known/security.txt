@@ -1,0 +1,3 @@
+Contact: mailto:lorenzocicogna00@gmail.com
+Preferred-Languages: en, it
+Canonical: https://lorenzocicogna.github.io/lorenzo-portfolio/.well-known/security.txt
