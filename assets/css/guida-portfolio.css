@@ -1,0 +1,170 @@
+/* Lorenzo Cicogna – isolated, no-cost portfolio information guide. */
+.lc-guide {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1100;
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.lc-guide * { box-sizing: border-box; }
+.lc-guide button { font: inherit; cursor: pointer; }
+.lc-guide button:focus-visible,
+.lc-guide input:focus-visible,
+.lc-guide a:focus-visible { outline: 3px solid var(--sand-500); outline-offset: 3px; }
+
+.lc-guide__toggle {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-left: auto;
+  border: 1px solid rgba(221, 203, 181, .65);
+  border-radius: 999px;
+  padding: 9px 16px 9px 9px;
+  background: var(--navy-950);
+  box-shadow: 0 13px 35px rgba(8, 17, 31, .26);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background .2s ease, transform .2s ease;
+}
+.lc-guide__toggle:hover { background: var(--navy-800); transform: translateY(-2px); }
+.lc-guide__symbol {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--sand-300);
+  color: var(--navy-950);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+.lc-guide__toggle-label { white-space: nowrap; }
+
+.lc-guide__panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 12px);
+  width: min(425px, calc(100vw - 24px));
+  max-height: min(690px, calc(100dvh - 112px));
+  overflow-y: auto;
+  border: 1px solid rgba(185, 140, 95, .45);
+  border-radius: 21px;
+  background: var(--sand-100);
+  box-shadow: 0 25px 75px rgba(8, 17, 31, .32);
+  overscroll-behavior: contain;
+}
+.lc-guide__panel[hidden], .lc-guide__answer[hidden] { display: none; }
+.lc-guide__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 19px;
+  background: var(--navy-950);
+  color: #fff;
+}
+.lc-guide__header > div { display: grid; gap: 4px; }
+.lc-guide__eyebrow {
+  color: var(--sand-300);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+.lc-guide__title { color: #fff; font-size: 20px; line-height: 1.17; font-weight: 700; }
+.lc-guide__close {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.38);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 24px !important;
+  line-height: 1 !important;
+}
+.lc-guide__close:hover { background: rgba(255,255,255,.12); }
+.lc-guide__body { display: grid; gap: 15px; padding: 19px; }
+.lc-guide__intro { margin: 0; color: var(--text); font-size: 13px; line-height: 1.55; }
+.lc-guide__choices { display: grid; gap: 7px; }
+.lc-guide__choices button {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 9px 12px;
+  background: white;
+  color: var(--navy-900);
+  font-size: 13px;
+  font-weight: 650;
+  text-align: left;
+  transition: border-color .15s ease, background .15s ease;
+}
+.lc-guide__choices button:hover { border-color: var(--sand-500); background: var(--sand-200); }
+.lc-guide__answer {
+  border: 1px solid rgba(185,140,95,.4);
+  border-left: 3px solid var(--sand-500);
+  border-radius: 10px;
+  padding: 12px 13px;
+  background: white;
+}
+.lc-guide__answer p { margin: 0; color: var(--text); font-size: 13px; line-height: 1.55; }
+.lc-guide__answer a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--navy-800);
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.lc-guide__form { display: grid; gap: 7px; }
+.lc-guide__form label { color: var(--navy-950); font-size: 12px; font-weight: 700; }
+.lc-guide__form-row { display: flex; gap: 6px; }
+.lc-guide__form-row input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 1px solid rgba(13,23,40,.25);
+  border-radius: 10px;
+  padding: 10px 11px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+}
+.lc-guide__form-row button {
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 13px;
+  background: var(--navy-900);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+.lc-guide__form-row button:hover { background: var(--navy-700); }
+.lc-guide__note {
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.52;
+}
+
+@media (max-width: 620px) {
+  .lc-guide { right: 12px; bottom: 12px; }
+  .lc-guide__panel { max-height: calc(100dvh - 102px); border-radius: 16px; }
+  .lc-guide__body { padding: 15px; gap: 12px; }
+  .lc-guide__toggle { padding: 8px 12px 8px 8px; }
+  .lc-guide__toggle-label { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-guide__toggle, .lc-guide__choices button { transition: none; }
+  .lc-guide__toggle:hover { transform: none; }
+}
