@@ -53,10 +53,10 @@
       unknown: "Posso orientarti tra esperienze, formazione, progetti, competenze e contatti di Lorenzo. Seleziona un argomento qui sopra.",
       unknownLink: "Vai ai contatti",
       topics: [
-        { id:"profile", label:"Chi è Lorenzo Cicogna?", keys:["chi e","chi sei","lorenzo","profilo","presentaz","background","informazioni su"],
+        { id:"profile", label:"Chi è Lorenzo Cicogna?", keys:["chi e","chi sei","profilo","presentaz","background","informazioni su"],
           answer:"Lorenzo è uno studente di Economia e Amministrazione delle Imprese con esperienza pratica in operations, servizio clienti, turismo, vendite e produzione tecnica. I suoi interessi principali sono analisi, processi aziendali e decisioni basate sui dati.",
           link:"Conosci Lorenzo", href:"index.html#about" },
-        { id:"experience", label:"Quali esperienze lavorative ha?", keys:["esperienz","lavorato","lavori","marina","tuk tuk","stema","cnc","cad","impiego"],
+        { id:"experience", label:"Quali esperienze lavorative ha?", keys:["esperienz","lavorato","lavori","che lavoro","dove lavora","marina","tuk tuk","stema","cnc","cad","impiego"],
           answer:"Il portfolio presenta esperienze presso Tuk Tuk Bergamo, MUN Apartment, STEMA TECH, Marina Militare e PM Impianti Technomac: turismo, customer experience, gestione ricettiva, programmazione CNC, logistica e progettazione CAD.",
           link:"Esperienze professionali", href:"index.html#experience" },
         { id:"roles", label:"Quali opportunità cerca?", keys:["carriera","stage","tirocin","opportunit","ruoli","lavoro cerca","cerca lavoro","spagna","madrid","analyst","assunz"],
@@ -90,7 +90,7 @@
       unknown: "Puedo ayudarte con experiencia, formación, proyectos, competencias y contacto. Elige un tema de la lista.",
       unknownLink: "Ir a contacto",
       topics: [
-        { id:"profile", label:"¿Quién es Lorenzo Cicogna?", keys:["quien es","quien eres","lorenzo","perfil","presentacion","trayectoria"],
+        { id:"profile", label:"¿Quién es Lorenzo Cicogna?", keys:["quien es","quien eres","perfil","presentacion","trayectoria"],
           answer:"Lorenzo es estudiante de Economía y Administración de Empresas, con experiencia práctica en operaciones, atención al cliente, turismo, ventas y producción técnica. Le interesan el análisis, los procesos empresariales y las decisiones basadas en datos.",
           link:"Sobre Lorenzo", href:"index.html#about" },
         { id:"experience", label:"¿Qué experiencia profesional tiene?", keys:["experienc","trabaj","empleo","marina","tuk tuk","stema","cnc","cad"],
