@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "verified_as_of": "2026-10-20",
+  "notice": "Programmi e portali selezionati da link ufficiali. Questa non è una scansione live delle vacancy: stato e criteri vanno sempre ricontrollati sul sito prima di candidarsi.",
+  "programmes": [
+    {
+      "id": "ryanair-graduate-2027",
+      "company": "Ryanair",
+      "title": "Ryanair Grad Programme 2027 — Operations / Commercial",
+      "location": "Swords, Dublin, Ireland",
+      "url": "https://careers.ryanair.com/jobs/ryanair-grad-programme-2027/",
+      "kind": "specific_listing",
+      "source": "Ryanair Careers",
+      "family": "airport",
+      "priority": "alta",
+      "application_deadline": "2027-01-31",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Programma graduate biennale con rotazioni in Operations, Commercial e People. Requisiti sul sito: degree 2.1 o equivalente da verificare, university finished non prima del 2025, diritto a lavorare in Irlanda. Colloquio in presenza a Dublino. Termine candidature 31/01/2027."
+    },
+    {
+      "id": "ryanair-finance-2027",
+      "company": "Ryanair",
+      "title": "Finance Grad Programme 2027 — ACA / ACCA Accredited",
+      "location": "Swords, Dublin, Ireland",
+      "url": "https://careers.ryanair.com/jobs/finance-grad-programme-2027-aca-acca-accredited/",
+      "kind": "specific_listing",
+      "source": "Ryanair Careers",
+      "family": "analysis",
+      "priority": "alta",
+      "application_deadline": "2027-01-31",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Percorso graduate Finance di 3,5 anni con rotazioni in FP&A, Financial Reporting, Banking, Audit e Controlling, con certificazione professionale. Laurea in Economics/Business compatibile a livello di area, ma verificare equivalenza 2.1 e requisiti del bando. Deadline ufficiale 31/01/2027."
+    },
+    {
+      "id": "ryanair-group-international-2027",
+      "company": "Ryanair Group",
+      "title": "Ryanair Group International Grad Programme 2027",
+      "location": "Dublin, Ireland / Warsaw, Poland / Malta / Vienna, Austria",
+      "url": "https://careers.ryanair.com/jobs/ryanair-group-international-grad-programme-2027/",
+      "kind": "specific_listing",
+      "source": "Ryanair Careers",
+      "family": "airport",
+      "priority": "alta",
+      "application_deadline": "2027-01-31",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Programma biennale internazionale per Malta Air / Lauda Europe / Buzz. Inizia con 6 mesi a Dublino, poi Malta/Vienna/Warsaw a seconda del percorso. Rotazioni in Finance e Operations. Verificare equivalenza 2.1 e requisiti linguistici. Termine 31/01/2027."
+    },
+    {
+      "id": "ec-bluebook-admin-ug-oct2027",
+      "company": "European Commission",
+      "title": "Blue Book — Administrative Traineeship (ADMIN UG), October 2027 session",
+      "location": "Brussels / Luxembourg / EU",
+      "url": "https://traineeships.ec.europa.eu/administrative-traineeship-university-graduates_en",
+      "kind": "upcoming_intake",
+      "source": "European Commission",
+      "family": "analysis",
+      "priority": "alta",
+      "application_opens": "2027-02-15",
+      "application_deadline": "2027-03-12",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Sessione MARZO 2027 già chiusa. Prossimo intake OTTOBRE 2027: candidature 15/02–12/03/2027 (10:00 Bruxelles). Per ADMIN UG occorre laurea triennale completa prima della scadenza e certificazione di inglese/francese/tedesco almeno C1 oltre ad altra lingua UE B2. Idoneità personale non confermata."
+    },
+    {
+      "id": "eda-traineeship-2027",
+      "company": "European Defence Agency",
+      "title": "EDA Traineeship Programme — 2027 call watch",
+      "location": "Brussels, Belgium",
+      "url": "https://www.eda.europa.eu/careers/traineeship",
+      "kind": "recurring_programme",
+      "source": "European Defence Agency",
+      "family": "operations",
+      "priority": "alta",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Bando traineeship normalmente pubblicato verso MARZO, con stage di circa 12 mesi da settembre. Laurea già ottenuta entro la scadenza, inglese e seconda lingua dei paesi partecipanti, e requisiti PSCC da verificare. Nessuna data di bando 2027 garantita alla data della ricognizione."
+    },
+    {
+      "id": "ecb-traineeship-monitor",
+      "company": "European Central Bank",
+      "title": "ECB — traineeships and early career vacancies",
+      "location": "Frankfurt am Main, Germany",
+      "url": "https://www.ecb.europa.eu/careers/vacancies/html/index.en.html",
+      "kind": "official_portal",
+      "source": "ECB Careers",
+      "family": "analysis",
+      "priority": "alta",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Portale ufficiale delle vacancy BCE, comprese posizioni trainee in economia, finance e operations quando pubblicate. Nessuna specifica selezione 2027 verificata in questa voce."
+    },
+    {
+      "id": "easa-traineeship-monitor",
+      "company": "European Union Aviation Safety Agency",
+      "title": "EASA — early career and traineeship opportunities",
+      "location": "Cologne, Germany",
+      "url": "https://www.easa.europa.eu/en/the-agency/careers",
+      "kind": "official_portal",
+      "source": "EASA Careers",
+      "family": "airport",
+      "priority": "alta",
+      "advertised_online_as_of": "2026-10-20",
+      "description": "Portale EASA a Colonia per vacancies e traineeships nell'aviazione, incluse funzioni finance, operations e supporto. Non è una singola offerta aperta verificata."
+    }
+  ]
+}

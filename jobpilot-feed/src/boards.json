@@ -1,0 +1,29 @@
+{
+  "notice": "Solo bacheche pubbliche Greenhouse/Lever, senza login. Le fonti possono cambiare. Confermare ogni annuncio sul sito dell'azienda prima di candidarsi.",
+  "greenhouse": [
+    {
+      "name": "AutoScout24",
+      "token": "autoscout24"
+    },
+    {
+      "name": "Heritage Holdings",
+      "token": "heritageholdings"
+    },
+    {
+      "name": "Scalapay",
+      "token": "scalapaysrl"
+    }
+  ],
+  "lever": [
+    {
+      "name": "WatchGuard",
+      "site": "watchguard",
+      "region": "global"
+    },
+    {
+      "name": "Aleph",
+      "site": "aleph",
+      "region": "global"
+    }
+  ]
+}

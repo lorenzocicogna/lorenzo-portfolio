@@ -1,0 +1,23 @@
+name: Job Pilot public feed - offline tests
+
+on:
+  pull_request:
+    paths:
+      - "jobpilot-feed/**"
+      - ".github/workflows/jobpilot-public-feed.yml"
+      - ".github/workflows/jobpilot-feed-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s jobpilot-feed/tests -v
