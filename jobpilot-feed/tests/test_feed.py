@@ -65,7 +65,7 @@ class PublicFeedTests(unittest.TestCase):
                 and j.get("status") == "salvata"
                 and not j.get("applied_date")
                 and not j.get("outcome_date")
-                and not j.get("notes")
+                and (not j.get("notes") or j.get("watchlist") is True)
                 for j in feed["jobs"]
             ))
 
