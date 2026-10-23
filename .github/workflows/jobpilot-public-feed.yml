@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
+  pages: write
 
 concurrency:
   group: jobpilot-public-feed
@@ -44,30 +46,46 @@ jobs:
             --input jobpilot-feed/src/programmes-watchlist.source.json \
             --output jobpilot-feed/programmes-watchlist.json
 
-      - name: Safely publish only the two public JSON files
+      - name: Create PR, merge it and request Pages rebuild
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Only these two public job listing files may be published.
           git add -- jobpilot-feed/latest-jobs.json jobpilot-feed/programmes-watchlist.json
           if git diff --cached --quiet; then
             echo "Public feed already up-to-date."
             exit 0
           fi
-          git commit -m "data: update public Job Pilot job listings [skip ci]"
-          for attempt in 1 2 3 4 5; do
-            git fetch --no-tags origin main
-            if ! git rebase FETCH_HEAD; then
-              git rebase --abort || true
-              echo "::error::Public feed update conflicted with concurrent edits."
-              exit 1
-            fi
-            if git push origin HEAD:main; then
-              echo "Public feed published (attempt $attempt)"
-              exit 0
-            fi
-            sleep "$((attempt * 2))"
-          done
-          echo "::error::Feed publishing failed after 5 attempts. No force-push performed."
-          exit 1
+
+          # Never push to protected main; every update goes through a PR.
+          branch="automation/jobpilot-feed-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git commit -m "data: refresh public Job Pilot job leads"
+          git push origin "HEAD:refs/heads/$branch"
+
+          if ! pr_url="$(gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head "$branch" \
+              --title "data: refresh public Job Pilot feed" \
+              --body "Automated update of public ATS listings and official programme watchlist only. The scanner and offline checks passed. No personal job applications or private notes are included.")"; then
+            echo "::error::Enable 'Allow GitHub Actions to create and approve pull requests' in Settings > Actions > General > Workflow permissions, then re-run this workflow." >&2
+            echo "::error::The update branch '$branch' remains available for a manual pull request." >&2
+            exit 1
+          fi
+
+          echo "Created $pr_url"
+          # Main requires a PR but no approving reviews. No bypass.
+          gh pr merge "$pr_url" --repo "$GITHUB_REPOSITORY" --squash --delete-branch
+
+          # GITHUB_TOKEN-created commits do not trigger branch-based Pages builds.
+          if ! gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" > /dev/null; then
+            echo "::error::Merged $pr_url, but Pages rebuild request failed; verify published feed and Pages permissions." >&2
+            exit 1
+          fi
+          echo "Merged $pr_url and queued a GitHub Pages rebuild."
