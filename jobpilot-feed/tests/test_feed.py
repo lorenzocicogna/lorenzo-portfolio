@@ -13,6 +13,18 @@ import watchlist
 
 
 class PublicFeedTests(unittest.TestCase):
+    def test_protected_main_is_updated_via_pr_and_pages_rebuilt(self):
+        workflow = (ROOT.parent / '.github/workflows/jobpilot-public-feed.yml').read_text('utf-8')
+        self.assertIn('pull-requests: write', workflow)
+        self.assertIn('pages: write', workflow)
+        self.assertIn('gh pr create', workflow)
+        self.assertIn('gh pr merge', workflow)
+        self.assertIn('pages/builds', workflow)
+        self.assertIn('refs/heads/$branch', workflow)
+        self.assertNotIn('git push origin HEAD:main', workflow)
+        self.assertNotIn('force-push', workflow)
+        self.assertIn('jobpilot-feed/latest-jobs.json jobpilot-feed/programmes-watchlist.json', workflow)
+
     def test_configuration_has_no_personal_data(self):
         profile = json.loads((SRC / "search_profile.json").read_text("utf-8"))
         self.assertEqual(
