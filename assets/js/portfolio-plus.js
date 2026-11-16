@@ -12,7 +12,7 @@
       recruiterBlocks: [
         ["Practical experience", "Tourism mobility and guest relations at Tuk Tuk Bergamo; rental operations and pricing at MUN Apartment; previous technical and logistics roles."],
         ["Core capabilities", "KPI reporting, Excel and data analysis; customer experience, operational coordination, sales channels and cross-functional problem solving."],
-        ["Education & direction", "Currently studying at the University of Milano-Bicocca. Erasmus experience in Riga; seeking internship and entry-level opportunities across Europe, including both EU and non-EU European markets such as Norway, Switzerland and the United Kingdom."]
+        ["Education & direction", "Currently studying at the University of Milano-Bicocca. Erasmus experience in Riga; seeking internship and entry-level opportunities across Europe, including both EU and non-EU European markets such as Norway and Switzerland."]
       ],
       recruiterExplore: "Explore experience", recruiterCareer: "Career goals", recruiterContact: "Contact me",
       closeModal: "Close recruiter overview",
@@ -67,7 +67,7 @@
       recruiterBlocks: [
         ["Esperienza sul campo", "Mobilità turistica e rapporto con i clienti presso Tuk Tuk Bergamo; gestione della struttura e pricing per MUN Apartment; precedenti ruoli tecnici e logistici."],
         ["Competenze principali", "KPI e reporting, Excel e analisi dati; customer experience, coordinamento operativo, canali di vendita e problem solving."],
-        ["Formazione e obiettivi", "Attualmente studente all'Università di Milano-Bicocca. Esperienza Erasmus a Riga; ricerca di stage e posizioni junior in tutta Europa, sia nei Paesi UE sia nei mercati europei extra-UE come Norvegia, Svizzera e Regno Unito."]
+        ["Formazione e obiettivi", "Attualmente studente all'Università di Milano-Bicocca. Esperienza Erasmus a Riga; ricerca di stage e posizioni junior in tutta Europa, sia nei Paesi UE sia nei mercati europei extra-UE come Norvegia e Svizzera."]
       ],
       recruiterExplore: "Esplora le esperienze", recruiterCareer: "Obiettivi di carriera", recruiterContact: "Contattami",
       closeModal: "Chiudi il profilo per recruiter",
@@ -122,7 +122,7 @@
       recruiterBlocks: [
         ["Experiencia práctica", "Movilidad turística y atención al cliente en Tuk Tuk Bergamo; gestión de alojamiento y precios en MUN Apartment; puestos técnicos y logísticos anteriores."],
         ["Competencias clave", "KPI y reporting, Excel y análisis de datos; experiencia de cliente, coordinación operativa, canales de venta y resolución de problemas."],
-        ["Formación y objetivos", "Actualmente estudia en la Universidad de Milano-Bicocca. Experiencia Erasmus en Riga; busca prácticas y puestos junior en toda Europa, tanto en países de la UE como en mercados europeos no pertenecientes a la UE, como Noruega, Suiza y el Reino Unido."]
+        ["Formación y objetivos", "Actualmente estudia en la Universidad de Milano-Bicocca. Experiencia Erasmus en Riga; busca prácticas y puestos junior en toda Europa, tanto en países de la UE como en mercados europeos no pertenecientes a la UE, como Noruega y Suiza."]
       ],
       recruiterExplore: "Ver experiencia", recruiterCareer: "Objetivos profesionales", recruiterContact: "Contactar",
       closeModal: "Cerrar resumen para recruiters",
